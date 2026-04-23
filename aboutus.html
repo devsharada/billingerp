@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="img/home/favicon.png" type="image/x-icon">
+    <title>BillingERP</title>
+    <meta name="keywords" content="BillingERP" />
+    <meta name="description" content="BillingERP" />
+    <meta name="Classification" content="Computer software, Software" />
+    <link rel="canonical" href="https://billingerp.in//home" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="BillingERP" />
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+    <meta name="p:domain_verify" content="" />
+    <!--**********************-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link type="text/css" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link type="text/css" rel="stylesheet" href="vendor/aos/aos.css">
+    <link type="text/css" rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.css">
+    <link type="text/css" rel="stylesheet" href="vendor/glightbox/css/glightbox.min.css">
+    <link type="text/css" rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header id="header" class="header ">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo ">
+                <img src="img/home/logo.png" alt="Logo">
+            </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#features">Features</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#invoices">Invoices</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#pricing">Pricing</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#demoform">Demo</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#faq">FAQ</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <button class="btn loginbtn" data-bs-toggle="modal" data-bs-target="#loginModal"><i
+                    class="bi bi-person-circle me-sm-2"></i><span class="d-none d-sm-inline-block">Login</span></button>
+        </div>
+    </header>
+    <div class="modal fade loginDiv" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="row">
+                        <div class="col-md-6 d-none d-lg-block">
+                            <div class="loginPic h-100">
+                                <img class="w-100 h-100 object-position-center object-fit-cover rounded-2"
+                                    src="img/home/login.jpg" alt="Log In">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ps-lg-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                                    class="fa fa-close"></i></button>
+                            <form class="php-email-form p-3">
+                                <div class="row gy-2">
+                                    <div class="col-md-12 ps-md-0">
+                                        <p class="login-title mb-0">Sign In</p>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label>Mobile No.*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Mobile No.">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label>Password</label>
+                                        <div class="position-relative">
+                                            <input type="password" class="form-control" name="custpassword"
+                                                id='custpassword' placeholder="********">
+                                            <i class="bi bi-eye eye"></i>
+                                            <span class="error"></span>
+                                        </div>
+                                        <span class="forgot-password">Forgot password?</span>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="captchapic top-0 mt-3 mb-4">
+                                            <input class="form-control d-none" id="captchaImgId" type="hidden" value="">
+                                            <input class="form-control" id="captchaValidId" type="hidden" value="">
+                                            <canvas id="captchaCanvas" class="captchaCanvas" width="120"
+                                                height="35"></canvas>
+                                            <input type="text" id="captchaAns" onkeyup="checkCaptcha()"
+                                                class="form-control" placeholder="Enter Captcha" />
+                                            <i id="captchaValidIcon" class="d-none bi bi-check-square-fill"></i>
+                                        </div>
+                                        <span class="d-none error" id="captchaInvalid">Please enter valid captcha</span>
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn signinbtn mb-3">Submit</button>
+                                        <p class="account-label">Don't have an account? <a class="sign-up"
+                                                data-bs-toggle="modal" href="#registerModal" role="button">Sign Up</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade loginDiv" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="row">
+                        <div class="col-md-6 d-none d-lg-block mt-0">
+                            <div class="loginPic h-100">
+                                <img class="w-100 h-100 object-position-center object-fit-cover rounded-2"
+                                    src="img/home/register.jpg" alt="register">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ps-lg-0 mt-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                                    class="fa fa-close"></i></button>
+                            <form class="php-email-form p-3">
+                                <div class="row gy-2">
+                                    <div class="col-md-12 ps-md-0">
+                                        <p class="login-title mb-0">Sign Up</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12">
+                                        <label>Name*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Name">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>Mobile No.*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Mobile No.">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>Email ID*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Email ID">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-12">
+                                        <label>Address</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Address">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>State*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter State">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>Country*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Country">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>City*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter City">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>Pincode*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Pincode">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="captchapic top-0 mt-3 mb-2">
+                                            <input class="form-control d-none" id="captchaImgId" type="hidden" value="">
+                                            <input class="form-control" id="captchaValidId" type="hidden" value="">
+                                            <canvas id="captchaCanvas" class="captchaCanvas" width="120"
+                                                height="35"></canvas>
+                                            <input type="text" id="captchaAns" onkeyup="checkCaptcha()"
+                                                class="form-control" placeholder="Enter Captcha" />
+                                            <i id="captchaValidIcon" class="d-none bi bi-check-square-fill"></i>
+                                        </div>
+                                        <span class="d-none error" id="captchaInvalid">Please enter valid captcha</span>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" required="" type="checkbox" value=""
+                                                id="receiveSmsCheck">
+                                            <label class="form-check-label" for="receiveSmsCheck">I agree to receive
+                                                free SMS messages from BillingERP.</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn signinbtn my-3">Submit</button>
+                                        <p class="account-label">Don't have an account? <a class="sign-up"
+                                                data-bs-toggle="modal" href="#loginModal" role="button">Sign In</a></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="aboutus" class="aboutus-section position-relative py-0">
+        <div class="aboutus-banner row py-5 position-relative">
+            <div class="col mb-3">
+                <div class="d-flex flex-column gap-sm-3 gap-1 align-items-center">
+                    <div class="section-header">
+                        <p class="sectitle"><span class="text-green">About Us</p>
+                    </div>
+                    <div>
+                        <p class="aboutus-text text-center">
+                            At <span class="text-blue fw-semibold">Billing</span><span
+                                class="text-green fw-semibold">ERP</span>, we are dedicated to providing innovative
+                            billing and enterprise resource planning (ERP) solutions that streamline business
+                            operations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutus-images position-absolute">
+                <img src="img/home/aboutus-1.png" class="d-none d-md-block" alt="About Us">
+                <img src="img/home/aboutus-2.png" alt="About Us">
+                <img src="img/home/aboutus-3.png" class="d-none d-md-block" alt="About Us">
+                <img src="img/home/aboutus-4.png" class="d-none d-md-block" alt="About Us">
+            </div>
+        </div>
+        <section class="aboutus-content">
+            <div class="container">
+                <div>
+                    <p class="aboutus-titles">Driving Business Growth with Precision and Support</p>
+                    <p class="mt-3 aboutus-descriptions">
+                        With a strong commitment to customer satisfaction, we focus on delivering seamless integration
+                        and continuous support, allowing our clients to operate with confidence and agility. By
+                        optimizing billing workflows, we enable businesses to scale faster, make data-driven decisions,
+                        and achieve long-term success. Trust us to provide the technology and expertise that empower
+                        your business to thrive.
+                    </p>
+                </div>
+                <div
+                    class="row row-cols-xxl-2 row-cols-1 gap-xxl-0 gap-4 au-sections align-items-center justify-content-center">
+                    <div class="col text-xxl-start text-center">
+                        <div>
+                            <img src="img/home/aboutus-empower.png" alt="Empowering Businesses" width="100%">
+                        </div>
+                    </div>
+                    <div class="col text-xxl-start text-center">
+                        <div class="ps-xxl-5 ps-0">
+                            <p class="au-sections-text">We empower <span
+                                    class="text-green fw-bold text-decoration-underline">All</span> type of businesses
+                            </p>
+                            <p class="mt-xxl-0 mt-2">
+                                We empower businesses of all sizes by providing tailored solutions that streamline
+                                operations and enhance efficiency. Whether you're a startup or an established
+                                enterprise, our tools are designed to support your unique needs and drive sustainable
+                                growth.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="au-sections">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-12">
+                            <div>
+                                <p class="au-sections-text">We <span
+                                        class="text-green fw-bold text-decoration-underline">Fuel</span> business growth
+                                    and expansion</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12 mt-md-5 mt-4">
+                            <div class="au-cards">
+                                <div>
+                                    <svg class="au-icons" width="50" fill="#000000" viewBox="0 0 256 256" id="Flat"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M246.40381,143.19434a4.00061,4.00061,0,0,1-5.60108-.7959A55.57857,55.57857,0,0,0,196,120a4,4,0,0,1,0-8,28,28,0,1,0-27.50732-33.26074,4.00013,4.00013,0,0,1-7.85987-1.49219,36.00191,36.00191,0,1,1,54.06494,37.50513,63.58068,63.58068,0,0,1,32.50147,22.84155A3.99993,3.99993,0,0,1,246.40381,143.19434Zm-57.24268,71.05273a3.9998,3.9998,0,1,1-7.1914,3.50391,60.02582,60.02582,0,0,0-107.93946,0,3.9998,3.9998,0,1,1-7.1914-3.50391,67.56008,67.56008,0,0,1,40.90625-35.20581,44,44,0,1,1,40.50976,0A67.56139,67.56139,0,0,1,189.16113,214.24707ZM128,176a36,36,0,1,0-36-36A36.04061,36.04061,0,0,0,128,176ZM60,112A28,28,0,1,1,87.50732,78.73828a3.99989,3.99989,0,1,0,7.85938-1.49219A36.00177,36.00177,0,1,0,41.30225,114.7522,63.5829,63.5829,0,0,0,8.79883,137.5957a4,4,0,1,0,6.39648,4.80469A55.58072,55.58072,0,0,1,60,120a4,4,0,0,0,0-8Z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="au-tags">
+                                    <p>Professional Team</p>
+                                    <p class="mt-1">A dedicated, skilled team providing expert solutions to drive
+                                        success</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12 mt-md-5 mt-4">
+                            <div class="au-cards">
+                                <div>
+                                    <svg class="au-icons" width="50" fill="#000000" viewBox="0 0 256 256" id="Flat"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M172.00244,232a4.0002,4.0002,0,0,1-4,4h-80a4,4,0,1,1,0-8h80A4.0002,4.0002,0,0,1,172.00244,232Zm40-128a83.568,83.568,0,0,1-32.11426,66.06445,20.20461,20.20461,0,0,0-7.88574,15.91114V192a12.01312,12.01312,0,0,1-12,12h-64a12.01312,12.01312,0,0,1-12-12v-6.03125a19.994,19.994,0,0,0-7.76269-15.80859,83.59543,83.59543,0,0,1-32.23633-65.68653c-.251-45.49609,36.52344-83.37988,81.97656-84.45019A84.00227,84.00227,0,0,1,212.00244,104Zm-8,0a76.00116,76.00116,0,0,0-77.835-75.97852c-41.12109.96778-74.3916,35.24414-74.16406,76.40723a75.64143,75.64143,0,0,0,29.16992,59.43457,27.94355,27.94355,0,0,1,10.8291,22.10547V192a4.004,4.004,0,0,0,4,4h64a4.004,4.004,0,0,0,4-4v-6.02441a28.157,28.157,0,0,1,10.94043-22.2002A75.61285,75.61285,0,0,0,204.00244,104ZM136.78662,52.83984a3.99985,3.99985,0,0,0-1.32812,7.88868A43.84372,43.84372,0,0,1,171.3833,96.6084a4.00083,4.00083,0,0,0,3.93848,3.333,3.94685,3.94685,0,0,0,.67285-.05762A3.99892,3.99892,0,0,0,179.27,95.27246,51.84719,51.84719,0,0,0,136.78662,52.83984Z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="au-tags">
+                                    <p>Smart Decisions</p>
+                                    <p class="mt-1">Clear, actionable insights to help you make informed growth choices
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12 mt-md-5 mt-4">
+                            <div class="au-cards">
+                                <div>
+                                    <svg class="au-icons" width="50" fill="#000000" viewBox="0 0 256 256" id="Flat"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M244,128a52,52,0,0,1-88.76953,36.76953q-.0857-.0857-.166-.17676L95.02832,96.80371a44,44,0,1,0,0,62.39258l8.60449-9.71533a4,4,0,1,1,5.98926,5.30371l-8.68652,9.8081q-.08057.09083-.166.17676a52,52,0,1,1,0-73.53906q.0857.0857.166.17676l60.03613,67.78906a44,44,0,1,0,0-62.39258l-8.60449,9.71533a4,4,0,1,1-5.98926-5.30371l8.68652-9.8081q.08057-.09082.166-.17676A52,52,0,0,1,244,128Z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="au-tags">
+                                    <p>Long-Term Support</p>
+                                    <p class="mt-1">Reliable, ongoing assistance to ensure your business thrives</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="au-sections d-flex justify-content-center">
+                    <div class="au-career">
+                        <p>We’re constantly seeking exceptional talent to join our team.</p>
+                        <p class="mt-3">Join a Team That Thrives on Collaboration, Creativity, and Excellence.</p>
+                        <a href="/career" class="d-block">
+                            <button class="au-career-btn mt-sm-5 mt-4">
+                                See Open Positions
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <footer class="berp-footer">
+        <section class="pb-0">
+            <div class="container">
+                <div class="row gap-md-0 gap-5">
+                    <div class="col-md-4 col-12">
+                        <div class="d-flex flex-column justify-content-md-around gap-md-0 gap-4 h-100">
+                            <a href="index.html" class="logo d-block">
+                                <img src="img/home/logo.png" alt="Logo" class="footer-logo" width="200">
+                            </a>
+                            <div>
+                                <a href="index.html" class="footer-co-link d-block">billingerp.in</a>
+                                <div class="d-flex gap-3 align-items-center social-icons mt-3">
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M24.1392 32V23.9H26.5983L27 20.3H24.1392V18.5466C24.1392 17.6196 24.1628 16.7 25.4582 16.7H26.7702V14.1261C26.7702 14.0874 25.6432 14 24.5031 14C22.122 14 20.6311 15.4915 20.6311 18.2302V20.3H18V23.9H20.6311V32H24.1392Z"
+                                            fill="#0E9F16" />
+                                        <circle cx="22.5" cy="22.5" r="22" stroke="#DADADA" />
+                                    </svg>
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M21.9999 27.908C24.7111 27.908 26.909 25.7101 26.909 22.9989C26.909 20.2877 24.7111 18.0898 21.9999 18.0898C19.2887 18.0898 17.0908 20.2877 17.0908 22.9989C17.0908 25.7101 19.2887 27.908 21.9999 27.908ZM21.9999 26.2717C23.8074 26.2717 25.2726 24.8064 25.2726 22.9989C25.2726 21.1915 23.8074 19.7262 21.9999 19.7262C20.1924 19.7262 18.7272 21.1915 18.7272 22.9989C18.7272 24.8064 20.1924 26.2717 21.9999 26.2717Z"
+                                            fill="#0E9F16" />
+                                        <path
+                                            d="M26.909 17.2725C26.4571 17.2725 26.0908 17.6388 26.0908 18.0906C26.0908 18.5425 26.4571 18.9088 26.909 18.9088C27.3609 18.9088 27.7272 18.5425 27.7272 18.0906C27.7272 17.6388 27.3609 17.2725 26.909 17.2725Z"
+                                            fill="#0E9F16" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.5351 16.6804C13 17.7305 13 19.1052 13 21.8545V24.1455C13 26.8948 13 28.2695 13.5351 29.3196C14.0057 30.2433 14.7567 30.9943 15.6804 31.4649C16.7305 32 18.1052 32 20.8545 32H23.1455C25.8948 32 27.2695 32 28.3196 31.4649C29.2433 30.9943 29.9943 30.2433 30.4649 29.3196C31 28.2695 31 26.8948 31 24.1455V21.8545C31 19.1052 31 17.7305 30.4649 16.6804C29.9943 15.7567 29.2433 15.0057 28.3196 14.5351C27.2695 14 25.8948 14 23.1455 14H20.8545C18.1052 14 16.7305 14 15.6804 14.5351C14.7567 15.0057 14.0057 15.7567 13.5351 16.6804ZM23.1455 15.6364H20.8545C19.4529 15.6364 18.5 15.6376 17.7635 15.6978C17.0461 15.7564 16.6792 15.8627 16.4233 15.9931C15.8075 16.3068 15.3068 16.8075 14.9931 17.4233C14.8627 17.6792 14.7564 18.0461 14.6978 18.7635C14.6376 19.5 14.6364 20.4529 14.6364 21.8545V24.1455C14.6364 25.5472 14.6376 26.4999 14.6978 27.2365C14.7564 27.9539 14.8627 28.3208 14.9931 28.5767C15.3068 29.1925 15.8075 29.6931 16.4233 30.0069C16.6792 30.1373 17.0461 30.2436 17.7635 30.3022C18.5 30.3623 19.4529 30.3636 20.8545 30.3636H23.1455C24.5472 30.3636 25.4999 30.3623 26.2365 30.3022C26.9539 30.2436 27.3208 30.1373 27.5767 30.0069C28.1925 29.6931 28.6931 29.1925 29.0069 28.5767C29.1373 28.3208 29.2436 27.9539 29.3022 27.2365C29.3623 26.4999 29.3636 25.5472 29.3636 24.1455V21.8545C29.3636 20.4529 29.3623 19.5 29.3022 18.7635C29.2436 18.0461 29.1373 17.6792 29.0069 17.4233C28.6931 16.8075 28.1925 16.3068 27.5767 15.9931C27.3208 15.8627 26.9539 15.7564 26.2365 15.6978C25.4999 15.6376 24.5472 15.6364 23.1455 15.6364Z"
+                                            fill="#0E9F16" />
+                                        <circle cx="22.5" cy="22.5" r="22" stroke="#DADADA" />
+                                    </svg>
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M19.9138 18.4428C19.6559 18.2954 19.339 18.2965 19.0821 18.4456C18.8251 18.5947 18.667 18.8693 18.667 19.1663V25.833C18.667 26.1301 18.8251 26.4047 19.0821 26.5538C19.339 26.7028 19.6559 26.7039 19.9138 26.5565L25.7471 23.2232C26.0067 23.0748 26.167 22.7988 26.167 22.4997C26.167 22.2006 26.0067 21.9245 25.7471 21.7762L19.9138 18.4428ZM23.654 22.4997L20.3337 24.397V20.6023L23.654 22.4997Z"
+                                            fill="#0E9F16" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 22.5C12 19.3752 12 17.8128 12.7958 16.7176C13.0528 16.3638 13.3638 16.0528 13.7176 15.7958C14.8128 15 16.3752 15 19.5 15H24.5C27.6248 15 29.1872 15 30.2824 15.7958C30.6362 16.0528 30.9472 16.3638 31.2042 16.7176C32 17.8128 32 19.3752 32 22.5C32 25.6248 32 27.1872 31.2042 28.2824C30.9472 28.6362 30.6362 28.9473 30.2824 29.2043C29.1872 30 27.6248 30 24.5 30H19.5C16.3752 30 14.8128 30 13.7176 29.2043C13.3638 28.9473 13.0528 28.6362 12.7958 28.2824C12 27.1872 12 25.6248 12 22.5ZM19.5 16.6667H24.5C26.0995 16.6667 27.1652 16.669 27.9727 16.7564C28.7491 16.8406 29.0867 16.9871 29.3028 17.1441C29.515 17.2983 29.7017 17.485 29.8559 17.6972C30.0129 17.9134 30.1594 18.2509 30.2436 19.0272C30.3311 19.8347 30.3333 20.9005 30.3333 22.5C30.3333 24.0995 30.3311 25.1652 30.2436 25.9727C30.1594 26.7491 30.0129 27.0867 29.8559 27.3028C29.7017 27.515 29.515 27.7017 29.3028 27.8559C29.0867 28.0129 28.7491 28.1594 27.9727 28.2436C27.1652 28.3311 26.0995 28.3333 24.5 28.3333H19.5C17.9005 28.3333 16.8347 28.3311 16.0272 28.2436C15.2509 28.1594 14.9134 28.0129 14.6972 27.8559C14.485 27.7017 14.2983 27.515 14.1441 27.3028C13.9871 27.0867 13.8405 26.7491 13.7564 25.9727C13.669 25.1652 13.6667 24.0995 13.6667 22.5C13.6667 20.9005 13.669 19.8347 13.7564 19.0272C13.8405 18.2509 13.9871 17.9134 14.1441 17.6972C14.2983 17.485 14.485 17.2983 14.6972 17.1441C14.9134 16.9871 15.2509 16.8406 16.0272 16.7564C16.8347 16.669 17.9005 16.6667 19.5 16.6667Z"
+                                            fill="#0E9F16" />
+                                        <circle cx="22.5" cy="22.5" r="22" stroke="#DADADA" />
+                                    </svg>
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="22.5" cy="22.5" r="22" stroke="#DADADA" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M31 30H27.6V24.0508C27.6 22.4188 26.8801 21.5083 25.5889 21.5083C24.1839 21.5083 23.35 22.4571 23.35 24.0508V30H19.95V18.95H23.35V20.1926C23.35 20.1926 24.4167 18.3208 26.8205 18.3208C29.2252 18.3208 31 19.7882 31 22.8244V30ZM16.0757 17.1828C14.9291 17.1828 14 16.2461 14 15.091C14 13.9367 14.9291 13 16.0757 13C17.2215 13 18.1505 13.9367 18.1505 15.091C18.1514 16.2461 17.2215 17.1828 16.0757 17.1828ZM14 30H18.25V18.95H14V30Z"
+                                            fill="#0E9F16" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-12">
+                        <div class="row">
+                            <div class="col-sm-4 col-12">
+                                <div class="footer-links">
+                                    <p class="fl-title">Quick Links</p>
+                                    <ul class="mt-3">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="index.html#demoform">Book Free Demo</a></li>
+                                        <li><a href="index.html#services">Services</a></li>
+                                        <li><a href="index.html#pricing">Pricing</a></li>
+                                        <li><a href="blog.html">Blogs</a></li>
+                                        <li><a href="index.html#faq">FAQ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-12">
+                                <div class="footer-links">
+                                    <p class="fl-title">Company</p>
+                                    <ul class="mt-3">
+                                        <li><a href="aboutus.html">About Us</a></li>
+                                        <li><a href="contactus.html">Contact Us</a></li>
+                                        <li><a href="career.html">Careers</a></li>
+                                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                                        <li><a href="terms.html">Terms & Conditions</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-12">
+                                <div class="footer-links">
+                                    <p class="fl-title">Contact Us</p>
+                                    <ul class="mt-3">
+                                        <li><a href="mailto:info@billingerp.in">info[at]billingerp[dot]in</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-line mt-2">
+                </div>
+                <a href="index.html" class="footer-copyright py-3 d-block">
+                    @2024 <span class="text-blue fw-semibold">Billing</span><span
+                        class="text-green fw-semibold">ERP</span> | All Rights Reserved
+                </a>
+            </div>
+        </section>
+    </footer>
+    <script src="vendor/aos/aos.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

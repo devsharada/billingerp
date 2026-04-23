@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="img/home/favicon.png" type="image/x-icon">
+    <title>BillingERP</title>
+    <meta name="keywords" content="BillingERP" />
+    <meta name="description" content="BillingERP" />
+    <meta name="Classification" content="Computer software, Software" />
+    <link rel="canonical" href="https://billingerp.in//home" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="BillingERP" />
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+    <meta name="p:domain_verify" content="" />
+    <!--**********************-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link type="text/css" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link type="text/css" rel="stylesheet" href="vendor/aos/aos.css">
+    <link type="text/css" rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.css">
+    <link type="text/css" rel="stylesheet" href="vendor/glightbox/css/glightbox.min.css">
+    <link type="text/css" rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header id="header" class="header ">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo ">
+                <img src="img/home/logo.png" alt="Logo">
+            </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#features">Features</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#invoices">Invoices</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#pricing">Pricing</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#demoform">Demo</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#faq">FAQ</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <button class="btn loginbtn" data-bs-toggle="modal" data-bs-target="#loginModal"><i
+                    class="bi bi-person-circle me-sm-2"></i><span class="d-none d-sm-inline-block">Login</span></button>
+        </div>
+    </header>
+    <div class="modal fade loginDiv" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="row">
+                        <div class="col-md-6 d-none d-lg-block">
+                            <div class="loginPic h-100">
+                                <img class="w-100 h-100 object-position-center object-fit-cover rounded-2"
+                                    src="img/home/login.jpg" alt="Log In">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ps-lg-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                                    class="fa fa-close"></i></button>
+                            <form class="php-email-form p-3">
+                                <div class="row gy-2">
+                                    <div class="col-md-12 ps-md-0">
+                                        <p class="login-title mb-0">Sign In</p>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label>Mobile No.*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Mobile No.">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label>Password</label>
+                                        <div class="position-relative">
+                                            <input type="password" class="form-control" name="custpassword"
+                                                id='custpassword' placeholder="********">
+                                            <i class="bi bi-eye eye"></i>
+                                            <span class="error"></span>
+                                        </div>
+                                        <span class="forgot-password">Forgot password?</span>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="captchapic top-0 mt-3 mb-4">
+                                            <input class="form-control d-none" id="captchaImgId" type="hidden" value="">
+                                            <input class="form-control" id="captchaValidId" type="hidden" value="">
+                                            <canvas id="captchaCanvas" class="captchaCanvas" width="120"
+                                                height="35"></canvas>
+                                            <input type="text" id="captchaAns" onkeyup="checkCaptcha()"
+                                                class="form-control" placeholder="Enter Captcha" />
+                                            <i id="captchaValidIcon" class="d-none bi bi-check-square-fill"></i>
+                                        </div>
+                                        <span class="d-none error" id="captchaInvalid">Please enter valid captcha</span>
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn signinbtn mb-3">Submit</button>
+                                        <p class="account-label">Don't have an account? <a class="sign-up"
+                                                data-bs-toggle="modal" href="#registerModal" role="button">Sign Up</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade loginDiv" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="row">
+                        <div class="col-md-6 d-none d-lg-block mt-0">
+                            <div class="loginPic h-100">
+                                <img class="w-100 h-100 object-position-center object-fit-cover rounded-2"
+                                    src="img/home/register.jpg" alt="register">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ps-lg-0 mt-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                                    class="fa fa-close"></i></button>
+                            <form class="php-email-form p-3">
+                                <div class="row gy-2">
+                                    <div class="col-md-12 ps-md-0">
+                                        <p class="login-title mb-0">Sign Up</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12">
+                                        <label>Name*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Name">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>Mobile No.*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Mobile No.">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>Email ID*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Email ID">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-12">
+                                        <label>Address</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Address">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>State*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter State">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>Country*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Country">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>City*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter City">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>Pincode*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Pincode">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="captchapic top-0 mt-3 mb-2">
+                                            <input class="form-control d-none" id="captchaImgId" type="hidden" value="">
+                                            <input class="form-control" id="captchaValidId" type="hidden" value="">
+                                            <canvas id="captchaCanvas" class="captchaCanvas" width="120"
+                                                height="35"></canvas>
+                                            <input type="text" id="captchaAns" onkeyup="checkCaptcha()"
+                                                class="form-control" placeholder="Enter Captcha" />
+                                            <i id="captchaValidIcon" class="d-none bi bi-check-square-fill"></i>
+                                        </div>
+                                        <span class="d-none error" id="captchaInvalid">Please enter valid captcha</span>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" required="" type="checkbox" value=""
+                                                id="receiveSmsCheck">
+                                            <label class="form-check-label" for="receiveSmsCheck">I agree to receive
+                                                free SMS messages from BillingERP.</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn signinbtn my-3">Submit</button>
+                                        <p class="account-label">Don't have an account? <a class="sign-up"
+                                                data-bs-toggle="modal" href="#loginModal" role="button">Sign In</a></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li>Blog Detail</li>
+            </ol>
+        </div>
+    </section>
+    <div class="blog-detail-img">
+        <img src="img/blog/blog-detail3.png" alt="Blog Detail">
+        <div class="bd-overlay"></div>
+        <div class="bd-title">
+            <p>Boost Cash Flow with ERP Billing Automation</p>
+            <p>Learn how automating billing through ERP can significantly improve your cash flow.</p>
+        </div>
+    </div>
+    <section id="blog-detail" class="bd-section">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-8 col-12">
+                    <div class="bd-content">
+                        <div class="d-flex flex-column gap-4">
+                            <p class="bd-point-description mt-1">
+                                ERP billing automation is a powerful tool that can significantly improve cash flow by
+                                automating and streamlining the invoicing and payment processes. It integrates financial
+                                functions such as order processing, invoicing, and payment tracking into a single
+                                system, ensuring faster and more accurate billing. By eliminating manual tasks,
+                                businesses can reduce errors, accelerate the billing cycle, and improve payment
+                                collection. The automation not only enhances operational efficiency but also offers
+                                real-time financial visibility, which helps businesses optimize their cash flow and make
+                                better financial decisions. This ultimately leads to a more predictable cash flow and a
+                                healthier financial outlook.
+                            </p>
+                            <div>
+                                <p class="bd-point">Increased Billing Efficiency</p>
+                                <div>
+                                    <p class="bd-point-description mt-1">
+                                        ERP billing automation accelerates the invoicing process by eliminating manual
+                                        data entry and repetitive tasks. Automated systems generate and send invoices
+                                        instantly, cutting down the time it takes from completing a sale to collecting
+                                        payment, which improves cash flow and reduces backlogs.
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="bd-point">Enhanced Accuracy</p>
+                                <div>
+                                    <p class="bd-point-description mt-1">
+                                        Manual invoicing is prone to human error, such as incorrect pricing or data
+                                        entry mistakes. ERP automation eliminates these errors by using pre-set rules
+                                        and data integrations, ensuring accurate invoices are sent to customers,
+                                        reducing the chances of disputes and payment delays.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="bdc-img d-flex flex-sm-row flex-column gap-3">
+                                <img src="img/blog/blog-3-1.png" alt="Blog">
+                                <img src="img/blog/blog-3-2.png" alt="Blog">
+                            </div>
+                            <div>
+                                <p class="bd-point">Faster Payment Processing</p>
+                                <div>
+                                    <p class="bd-point-description mt-1">
+                                        With automated invoicing, payment reminders, and integration with payment
+                                        gateways, businesses can collect payments faster. ERP systems can trigger
+                                        automatic reminders and send electronic payment options, speeding up the payment
+                                        cycle and improving working capital.
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="bd-point">Real-Time Financial Visibility</p>
+                                <div>
+                                    <p class="bd-point-description mt-1">
+                                        ERP billing automation offers real-time tracking of invoices and payments.
+                                        Businesses can monitor the status of each invoice, track outstanding payments,
+                                        and get an overview of their accounts receivable, helping them take proactive
+                                        steps in managing cash flow and preventing payment delays.
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="bd-point">Improved Cash Flow Management</p>
+                                <div>
+                                    <p class="bd-point-description mt-1">
+                                        By automating the invoicing and payment collection process, ERP systems ensure
+                                        faster payments and reduce the time it takes for businesses to convert sales
+                                        into cash. This allows companies to maintain a healthier cash flow, helping them
+                                        meet operational expenses and avoid cash shortages.
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="bd-point">Cost Savings</p>
+                                <div>
+                                    <p class="bd-point-description mt-1">
+                                        Automating billing processes reduces the need for manual labor in accounting and
+                                        invoicing tasks. Businesses save on administrative costs by eliminating manual
+                                        data entry, postage, and paper-based invoicing, leading to lower overhead costs
+                                        and improved profitability.
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="bd-point">Automated Payment Reminders</p>
+                                <div>
+                                    <p class="bd-point-description mt-1">
+                                        Automated systems can send payment reminders and overdue notices on behalf of
+                                        the business, ensuring customers are promptly reminded of their financial
+                                        obligations. This reduces the need for manual follow-ups, helping to collect
+                                        payments more quickly without extra effort from the accounting team.
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="bd-point">Scalability and Flexibility</p>
+                                <div>
+                                    <p class="bd-point-description mt-1">
+                                        As businesses grow, ERP billing automation systems can scale to handle increased
+                                        transaction volumes without the need for additional resources. Whether dealing
+                                        with a larger customer base or more complex billing structures, ERP systems can
+                                        easily accommodate the expansion while maintaining efficiency and accuracy.
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="bd-leave-comment">Leave A comment</p>
+                                <div class="bd-lc-form cmn-form-fields mt-3">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="col-sm-4 col-12">
+                                                <div class="mb-3">
+                                                    <label for="name" class="form-label">Name</label>
+                                                    <input type="text" class="form-control" id="name"
+                                                        placeholder="eg. John">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 col-12">
+                                                <div class="mb-3">
+                                                    <label for="email" class="form-label">Email</label>
+                                                    <input type="email" class="form-control" id="email"
+                                                        placeholder="eg. abc@gmail.com" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 col-12">
+                                                <div class="mb-4">
+                                                    <label for="mobile" class="form-label">Mobile No</label>
+                                                    <input type="text" class="form-control" id="mobile"
+                                                        placeholder="eg. 1234567890" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="mb-4">
+                                                    <label for="bd-comment" class="form-label">Comments</label>
+                                                    <textarea class="form-control" id="bd-comment" rows="4"
+                                                        placeholder="Type Here"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <button class="btn cmn-submit-btn bd-lc-submit-btn">
+                                                    Submit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="bd-content bd-more-blogs d-flex flex-column gap-2">
+                        <p class="mb-title ps-3">More Blogs</p>
+                        <a href="https://www.billingerp.in//blog/blogdetail1"
+                            class="more-blogs-card d-flex gap-3 align-items-center">
+                            <img src="img/blog/blog-detail1.png" alt="Blog">
+                            <div class="overflow-hidden">
+                                <p class="mb-title">ERP for Better Collaboration</p>
+                                <p class="mb-description">Read how ERP systems foster collaboration across departments
+                                    and improving overall productivity.</p>
+                            </div>
+                        </a>
+                        <a href="https://www.billingerp.in//blog/blogdetail2"
+                            class="more-blogs-card d-flex gap-3 align-items-center">
+                            <img src="img/blog/blog-detail2.png" alt="Blog">
+                            <div class="overflow-hidden">
+                                <p class="mb-title">Why ERP is a Game-Changer for Billing</p>
+                                <p class="mb-description">Explore how ERP systems optimize your billing process through
+                                    cutting-edge processes.</p>
+                            </div>
+                        </a>
+                        <a href="https://www.billingerp.in//blog/blogdetail4"
+                            class="more-blogs-card d-flex gap-3 align-items-center">
+                            <img src="img/blog/blog-detail4.png" alt="Blog">
+                            <div class="overflow-hidden">
+                                <p class="mb-title">Seamlessly Integrate Billing with ERP: Here’s How</p>
+                                <p class="mb-description">A simple guide to integrating your billing system with an ERP
+                                    for max efficiency.</p>
+                            </div>
+                        </a>
+                        <a href="https://www.billingerp.in//blog/blogdetail5"
+                            class="more-blogs-card d-flex gap-3 align-items-center">
+                            <img src="img/blog/blog-detail5.png" alt="Blog">
+                            <div class="overflow-hidden">
+                                <p class="mb-title">Stay Tax-Compliant with ERP Billing Systems</p>
+                                <p class="mb-description">Ensure accurate tax calculations and stay compliant with
+                                    ERP-powered billing.</p>
+                            </div>
+                        </a>
+                        <a href="https://www.billingerp.in//blog/blogdetail6"
+                            class="more-blogs-card d-flex gap-3 align-items-center">
+                            <img src="img/blog/blog-detail6.png" alt="Blog">
+                            <div class="overflow-hidden">
+                                <p class="mb-title">Benefits of ERP for Billing</p>
+                                <p class="mb-description">Discover how ERP can enhance billing accuracy and efficiency
+                                    with optimize solutions.</p>
+                            </div>
+                        </a>
+                        <a href="https://www.billingerp.in//blog/blogdetail7"
+                            class="more-blogs-card d-flex gap-3 align-items-center">
+                            <img src="img/blog/blog-detail7.png" alt="Blog">
+                            <div class="overflow-hidden">
+                                <p class="mb-title">How ERP Billing Systems Save Time and Money</p>
+                                <p class="mb-description">Explore the time-saving and cost-reducing advantages of
+                                    automating your billing with an ERP solution.</p>
+                            </div>
+                        </a>
+                        <a href="https://www.billingerp.in//blog/blogdetail8"
+                            class="more-blogs-card d-flex gap-3 align-items-center">
+                            <img src="img/blog/blog-detail8.png" alt="Blog">
+                            <div class="overflow-hidden">
+                                <p class="mb-title">Real-Time Billing Insights with ERP: A Competitive Edge</p>
+                                <p class="mb-description">Learn how real-time billing data through ERP systems can give
+                                    your business a competitive advantage.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="berp-footer">
+        <section class="pb-0">
+            <div class="container">
+                <div class="row gap-md-0 gap-5">
+                    <div class="col-md-4 col-12">
+                        <div class="d-flex flex-column justify-content-md-around gap-md-0 gap-4 h-100">
+                            <a href="index.html" class="logo d-block">
+                                <img src="img/home/logo.png" alt="Logo" class="footer-logo" width="200">
+                            </a>
+                            <div>
+                                <a href="index.html" class="footer-co-link d-block">billingerp.in</a>
+                                <div class="d-flex gap-3 align-items-center social-icons mt-3">
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M24.1392 32V23.9H26.5983L27 20.3H24.1392V18.5466C24.1392 17.6196 24.1628 16.7 25.4582 16.7H26.7702V14.1261C26.7702 14.0874 25.6432 14 24.5031 14C22.122 14 20.6311 15.4915 20.6311 18.2302V20.3H18V23.9H20.6311V32H24.1392Z"
+                                            fill="#0E9F16" />
+                                        <circle cx="22.5" cy="22.5" r="22" stroke="#DADADA" />
+                                    </svg>
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M21.9999 27.908C24.7111 27.908 26.909 25.7101 26.909 22.9989C26.909 20.2877 24.7111 18.0898 21.9999 18.0898C19.2887 18.0898 17.0908 20.2877 17.0908 22.9989C17.0908 25.7101 19.2887 27.908 21.9999 27.908ZM21.9999 26.2717C23.8074 26.2717 25.2726 24.8064 25.2726 22.9989C25.2726 21.1915 23.8074 19.7262 21.9999 19.7262C20.1924 19.7262 18.7272 21.1915 18.7272 22.9989C18.7272 24.8064 20.1924 26.2717 21.9999 26.2717Z"
+                                            fill="#0E9F16" />
+                                        <path
+                                            d="M26.909 17.2725C26.4571 17.2725 26.0908 17.6388 26.0908 18.0906C26.0908 18.5425 26.4571 18.9088 26.909 18.9088C27.3609 18.9088 27.7272 18.5425 27.7272 18.0906C27.7272 17.6388 27.3609 17.2725 26.909 17.2725Z"
+                                            fill="#0E9F16" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.5351 16.6804C13 17.7305 13 19.1052 13 21.8545V24.1455C13 26.8948 13 28.2695 13.5351 29.3196C14.0057 30.2433 14.7567 30.9943 15.6804 31.4649C16.7305 32 18.1052 32 20.8545 32H23.1455C25.8948 32 27.2695 32 28.3196 31.4649C29.2433 30.9943 29.9943 30.2433 30.4649 29.3196C31 28.2695 31 26.8948 31 24.1455V21.8545C31 19.1052 31 17.7305 30.4649 16.6804C29.9943 15.7567 29.2433 15.0057 28.3196 14.5351C27.2695 14 25.8948 14 23.1455 14H20.8545C18.1052 14 16.7305 14 15.6804 14.5351C14.7567 15.0057 14.0057 15.7567 13.5351 16.6804ZM23.1455 15.6364H20.8545C19.4529 15.6364 18.5 15.6376 17.7635 15.6978C17.0461 15.7564 16.6792 15.8627 16.4233 15.9931C15.8075 16.3068 15.3068 16.8075 14.9931 17.4233C14.8627 17.6792 14.7564 18.0461 14.6978 18.7635C14.6376 19.5 14.6364 20.4529 14.6364 21.8545V24.1455C14.6364 25.5472 14.6376 26.4999 14.6978 27.2365C14.7564 27.9539 14.8627 28.3208 14.9931 28.5767C15.3068 29.1925 15.8075 29.6931 16.4233 30.0069C16.6792 30.1373 17.0461 30.2436 17.7635 30.3022C18.5 30.3623 19.4529 30.3636 20.8545 30.3636H23.1455C24.5472 30.3636 25.4999 30.3623 26.2365 30.3022C26.9539 30.2436 27.3208 30.1373 27.5767 30.0069C28.1925 29.6931 28.6931 29.1925 29.0069 28.5767C29.1373 28.3208 29.2436 27.9539 29.3022 27.2365C29.3623 26.4999 29.3636 25.5472 29.3636 24.1455V21.8545C29.3636 20.4529 29.3623 19.5 29.3022 18.7635C29.2436 18.0461 29.1373 17.6792 29.0069 17.4233C28.6931 16.8075 28.1925 16.3068 27.5767 15.9931C27.3208 15.8627 26.9539 15.7564 26.2365 15.6978C25.4999 15.6376 24.5472 15.6364 23.1455 15.6364Z"
+                                            fill="#0E9F16" />
+                                        <circle cx="22.5" cy="22.5" r="22" stroke="#DADADA" />
+                                    </svg>
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M19.9138 18.4428C19.6559 18.2954 19.339 18.2965 19.0821 18.4456C18.8251 18.5947 18.667 18.8693 18.667 19.1663V25.833C18.667 26.1301 18.8251 26.4047 19.0821 26.5538C19.339 26.7028 19.6559 26.7039 19.9138 26.5565L25.7471 23.2232C26.0067 23.0748 26.167 22.7988 26.167 22.4997C26.167 22.2006 26.0067 21.9245 25.7471 21.7762L19.9138 18.4428ZM23.654 22.4997L20.3337 24.397V20.6023L23.654 22.4997Z"
+                                            fill="#0E9F16" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 22.5C12 19.3752 12 17.8128 12.7958 16.7176C13.0528 16.3638 13.3638 16.0528 13.7176 15.7958C14.8128 15 16.3752 15 19.5 15H24.5C27.6248 15 29.1872 15 30.2824 15.7958C30.6362 16.0528 30.9472 16.3638 31.2042 16.7176C32 17.8128 32 19.3752 32 22.5C32 25.6248 32 27.1872 31.2042 28.2824C30.9472 28.6362 30.6362 28.9473 30.2824 29.2043C29.1872 30 27.6248 30 24.5 30H19.5C16.3752 30 14.8128 30 13.7176 29.2043C13.3638 28.9473 13.0528 28.6362 12.7958 28.2824C12 27.1872 12 25.6248 12 22.5ZM19.5 16.6667H24.5C26.0995 16.6667 27.1652 16.669 27.9727 16.7564C28.7491 16.8406 29.0867 16.9871 29.3028 17.1441C29.515 17.2983 29.7017 17.485 29.8559 17.6972C30.0129 17.9134 30.1594 18.2509 30.2436 19.0272C30.3311 19.8347 30.3333 20.9005 30.3333 22.5C30.3333 24.0995 30.3311 25.1652 30.2436 25.9727C30.1594 26.7491 30.0129 27.0867 29.8559 27.3028C29.7017 27.515 29.515 27.7017 29.3028 27.8559C29.0867 28.0129 28.7491 28.1594 27.9727 28.2436C27.1652 28.3311 26.0995 28.3333 24.5 28.3333H19.5C17.9005 28.3333 16.8347 28.3311 16.0272 28.2436C15.2509 28.1594 14.9134 28.0129 14.6972 27.8559C14.485 27.7017 14.2983 27.515 14.1441 27.3028C13.9871 27.0867 13.8405 26.7491 13.7564 25.9727C13.669 25.1652 13.6667 24.0995 13.6667 22.5C13.6667 20.9005 13.669 19.8347 13.7564 19.0272C13.8405 18.2509 13.9871 17.9134 14.1441 17.6972C14.2983 17.485 14.485 17.2983 14.6972 17.1441C14.9134 16.9871 15.2509 16.8406 16.0272 16.7564C16.8347 16.669 17.9005 16.6667 19.5 16.6667Z"
+                                            fill="#0E9F16" />
+                                        <circle cx="22.5" cy="22.5" r="22" stroke="#DADADA" />
+                                    </svg>
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="22.5" cy="22.5" r="22" stroke="#DADADA" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M31 30H27.6V24.0508C27.6 22.4188 26.8801 21.5083 25.5889 21.5083C24.1839 21.5083 23.35 22.4571 23.35 24.0508V30H19.95V18.95H23.35V20.1926C23.35 20.1926 24.4167 18.3208 26.8205 18.3208C29.2252 18.3208 31 19.7882 31 22.8244V30ZM16.0757 17.1828C14.9291 17.1828 14 16.2461 14 15.091C14 13.9367 14.9291 13 16.0757 13C17.2215 13 18.1505 13.9367 18.1505 15.091C18.1514 16.2461 17.2215 17.1828 16.0757 17.1828ZM14 30H18.25V18.95H14V30Z"
+                                            fill="#0E9F16" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-12">
+                        <div class="row">
+                            <div class="col-sm-4 col-12">
+                                <div class="footer-links">
+                                    <p class="fl-title">Quick Links</p>
+                                    <ul class="mt-3">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="index.html#demoform">Book Free Demo</a></li>
+                                        <li><a href="index.html#services">Services</a></li>
+                                        <li><a href="index.html#pricing">Pricing</a></li>
+                                        <li><a href="blog.html">Blogs</a></li>
+                                        <li><a href="index.html#faq">FAQ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-12">
+                                <div class="footer-links">
+                                    <p class="fl-title">Company</p>
+                                    <ul class="mt-3">
+                                        <li><a href="aboutus.html">About Us</a></li>
+                                        <li><a href="contactus.html">Contact Us</a></li>
+                                        <li><a href="career.html">Careers</a></li>
+                                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                                        <li><a href="terms.html">Terms & Conditions</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-12">
+                                <div class="footer-links">
+                                    <p class="fl-title">Contact Us</p>
+                                    <ul class="mt-3">
+                                        <li><a href="mailto:info@billingerp.in">info[at]billingerp[dot]in</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-line mt-2">
+                </div>
+                <a href="index.html" class="footer-copyright py-3 d-block">
+                    @2024 <span class="text-blue fw-semibold">Billing</span><span
+                        class="text-green fw-semibold">ERP</span> | All Rights Reserved
+                </a>
+            </div>
+        </section>
+    </footer>
+    <script src="vendor/aos/aos.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

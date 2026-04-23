@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="img/home/favicon.png" type="image/x-icon">
+    <title>BillingERP</title>
+    <meta name="keywords" content="BillingERP" />
+    <meta name="description" content="BillingERP" />
+    <meta name="Classification" content="Computer software, Software" />
+    <link rel="canonical" href="https://billingerp.in//home" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="BillingERP" />
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+    <meta name="p:domain_verify" content="" />
+    <!--**********************-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link type="text/css" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link type="text/css" rel="stylesheet" href="vendor/aos/aos.css">
+    <link type="text/css" rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.css">
+    <link type="text/css" rel="stylesheet" href="vendor/glightbox/css/glightbox.min.css">
+    <link type="text/css" rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header id="header" class="header ">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo ">
+                <img src="img/home/logo.png" alt="Logo">
+            </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#features">Features</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#invoices">Invoices</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#pricing">Pricing</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#demoform">Demo</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#faq">FAQ</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <button class="btn loginbtn" data-bs-toggle="modal" data-bs-target="#loginModal"><i
+                    class="bi bi-person-circle me-sm-2"></i><span class="d-none d-sm-inline-block">Login</span></button>
+        </div>
+    </header>
+    <div class="modal fade loginDiv" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="row">
+                        <div class="col-md-6 d-none d-lg-block">
+                            <div class="loginPic h-100">
+                                <img class="w-100 h-100 object-position-center object-fit-cover rounded-2"
+                                    src="img/home/login.jpg" alt="Log In">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ps-lg-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                                    class="fa fa-close"></i></button>
+                            <form class="php-email-form p-3">
+                                <div class="row gy-2">
+                                    <div class="col-md-12 ps-md-0">
+                                        <p class="login-title mb-0">Sign In</p>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label>Mobile No.*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Mobile No.">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label>Password</label>
+                                        <div class="position-relative">
+                                            <input type="password" class="form-control" name="custpassword"
+                                                id='custpassword' placeholder="********">
+                                            <i class="bi bi-eye eye"></i>
+                                            <span class="error"></span>
+                                        </div>
+                                        <span class="forgot-password">Forgot password?</span>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="captchapic top-0 mt-3 mb-4">
+                                            <input class="form-control d-none" id="captchaImgId" type="hidden" value="">
+                                            <input class="form-control" id="captchaValidId" type="hidden" value="">
+                                            <canvas id="captchaCanvas" class="captchaCanvas" width="120"
+                                                height="35"></canvas>
+                                            <input type="text" id="captchaAns" onkeyup="checkCaptcha()"
+                                                class="form-control" placeholder="Enter Captcha" />
+                                            <i id="captchaValidIcon" class="d-none bi bi-check-square-fill"></i>
+                                        </div>
+                                        <span class="d-none error" id="captchaInvalid">Please enter valid captcha</span>
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn signinbtn mb-3">Submit</button>
+                                        <p class="account-label">Don't have an account? <a class="sign-up"
+                                                data-bs-toggle="modal" href="#registerModal" role="button">Sign Up</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade loginDiv" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="row">
+                        <div class="col-md-6 d-none d-lg-block mt-0">
+                            <div class="loginPic h-100">
+                                <img class="w-100 h-100 object-position-center object-fit-cover rounded-2"
+                                    src="img/home/register.jpg" alt="register">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ps-lg-0 mt-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                                    class="fa fa-close"></i></button>
+                            <form class="php-email-form p-3">
+                                <div class="row gy-2">
+                                    <div class="col-md-12 ps-md-0">
+                                        <p class="login-title mb-0">Sign Up</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12">
+                                        <label>Name*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Name">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>Mobile No.*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Mobile No.">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>Email ID*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Email ID">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-12">
+                                        <label>Address</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Address">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>State*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter State">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>Country*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Country">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>City*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter City">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label>Pincode*</label>
+                                        <input type="text" class="form-control" name="visitor_mobile" id='cust_mobile'
+                                            placeholder="Enter Pincode">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="captchapic top-0 mt-3 mb-2">
+                                            <input class="form-control d-none" id="captchaImgId" type="hidden" value="">
+                                            <input class="form-control" id="captchaValidId" type="hidden" value="">
+                                            <canvas id="captchaCanvas" class="captchaCanvas" width="120"
+                                                height="35"></canvas>
+                                            <input type="text" id="captchaAns" onkeyup="checkCaptcha()"
+                                                class="form-control" placeholder="Enter Captcha" />
+                                            <i id="captchaValidIcon" class="d-none bi bi-check-square-fill"></i>
+                                        </div>
+                                        <span class="d-none error" id="captchaInvalid">Please enter valid captcha</span>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" required="" type="checkbox" value=""
+                                                id="receiveSmsCheck">
+                                            <label class="form-check-label" for="receiveSmsCheck">I agree to receive
+                                                free SMS messages from BillingERP.</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn signinbtn my-3">Submit</button>
+                                        <p class="account-label">Don't have an account? <a class="sign-up"
+                                                data-bs-toggle="modal" href="#loginModal" role="button">Sign In</a></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li>Career</li>
+            </ol>
+        </div>
+    </section>
+    <section class="career py-5">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-12 col-md-6 order-2 order-md-1">
+                    <header class="section-header text-start  mt-4 pb-0">
+                        <h1 class="sectitle">Shape Your <span class="text-blue mx-2">Future<br></span>Build Your <span
+                                class="text-green mx-2">Career</span> with Us!</h1>
+                        <p class="career-txt mt-4 mb-5">We’re looking for passionate people to join our team. If you’re
+                            ready to grow, learn and make an impact, we’d love to have you with us!</p>
+                        <a href="#jobForm" class="btn bookdemobtn">Apply Now</a>
+                    </header>
+                </div>
+                <div class="col-12 col-md-6 col-xl-5 col-xxl-4 mx-auto order-1">
+                    <div class="w-100">
+                        <img class="w-100" src="img/home/career.png" alt="career">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <header class="section-header text-start">
+                        <h1 class="sectitle fs-3">Be a Part of<span class="text-blue ms-2">Billing</span><span
+                                class="text-green ">ERP</span> </h1>
+                    </header>
+                </div>
+                <div class="col-12">
+                    <div class="accordion job-accordion" id="jobAccordion">
+                        <div class="accordion-item border">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Business Development Executive
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#jobAccordion">
+                                <div class="accordion-body">
+                                    <div class="job-detail-top mb-3">
+                                        <div class="row">
+                                            <div class="col-12 col-xl-6">
+                                                <div class="d-md-flex align-items-center gap-4">
+                                                    <p><span class="fw-semibold">Position</span> : Business Development
+                                                        Executive</p>
+                                                    <p><span class="fw-semibold">Department</span> : Sales and Marketing
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-xl-6">
+                                                <div class="d-md-flex align-items-center gap-4">
+                                                    <p><i class="bi bi-briefcase me-2"></i><span
+                                                            class="fw-semibold">Experience</span> : 0-2 Year Minimum</p>
+                                                    <p><i class="bi bi-geo-alt me-2"></i><span
+                                                            class="fw-semibold">Location</span> : Pune</p>
+                                                    <p><i class="bi bi-clock me-2"></i><span
+                                                            class="fw-semibold">Employment</span> : Full-Time</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="job-description">
+                                        <div>
+                                            <span class="job-subtitle">Job Summary</span>
+                                            <p>The Business Development Executive will play a critical role in promoting
+                                                our products, managing the entire sales process, and converting
+                                                potential clients into satisfied customers. This includes product
+                                                demonstrations, pitching, negotiating, calling, follow-ups, and closing
+                                                deals.</p>
+                                        </div>
+                                        <div>
+                                            <span class="job-subtitle">Key Responsibilities</span>
+                                            <ul>
+                                                <li>
+                                                    <p class="fw-semibold">Product Demonstrations :</p>
+                                                    <p>Conduct comprehensive product demonstrations to potential
+                                                        clients, highlighting key features and benefits.</p>
+                                                    <p>Tailor presentations to address the specific needs and pain
+                                                        points of each client.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Sales Pitching :</p>
+                                                    <p>Develop and deliver compelling sales pitches to prospective
+                                                        clients. </p>
+                                                    <p>Clearly communicate the value propositions of our products and
+                                                        services.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Negotiation :</p>
+                                                    <p>Negotiate terms and conditions with potential clients to reach
+                                                        mutually beneficial agreements.</p>
+                                                    <p>Address client objections and provide appropriate solutions.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Calling and Follow-ups :</p>
+                                                    <p>Make outbound calls to potential clients to initiate contact and
+                                                        schedule meetings or demos.</p>
+                                                    <p>Follow up with leads through calls, emails, and other
+                                                        communication channels to maintain engagement.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Converting Leads :</p>
+                                                    <p>Work diligently to convert potential leads into paying clients by
+                                                        understanding their needs and offering tailored solutions.</p>
+                                                    <p>Ensure a smooth and positive transition from lead to customer.
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Sales Process Management :</p>
+                                                    <p>Maintain an organized and up-to-date CRM system with detailed
+                                                        records of interactions, follow-ups, and deal progress.</p>
+                                                    <p>Track and report on sales metrics, providing regular updates to
+                                                        the sales manager.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Collaboration and Strategy :</p>
+                                                    <p>Collaborate with the sales and marketing teams to align
+                                                        strategies and share insights.</p>
+                                                    <p>Contribute to the development of sales strategies and campaigns.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <span class="job-subtitle">Requirements :</span>
+                                            <ul>
+                                                <li>
+                                                    <p>Bachelor's degree in Business, Marketing, or a related field.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Proven experience in business development, sales, or a similar
+                                                        role.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Strong presentation and demonstration skills.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Excellent communication and negotiation abilities.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Self-motivated with strong organizational and time management
+                                                        skills.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Ability to work independently and as part of a team.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Proficiency in CRM software and sales management tools.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Results-driven with a strong focus on achieving targets.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Technical Support Executive
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#jobAccordion">
+                                <div class="accordion-body">
+                                    <div class="job-detail-top mb-3">
+                                        <div class="row">
+                                            <div class="col-12 col-xl-6">
+                                                <div class="d-md-flex align-items-center gap-4">
+                                                    <p><span class="fw-semibold">Position</span> : Technical Support
+                                                        Executive</p>
+                                                    <p><span class="fw-semibold">Department</span> : Technical Support
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-xl-6">
+                                                <div class="d-md-flex align-items-center gap-4">
+                                                    <p><i class="bi bi-briefcase me-2"></i><span
+                                                            class="fw-semibold">Experience</span> : 0-3 Years</p>
+                                                    <p><i class="bi bi-geo-alt me-2"></i><span
+                                                            class="fw-semibold">Location</span> : Pune</p>
+                                                    <p><i class="bi bi-clock me-2"></i><span
+                                                            class="fw-semibold">Employment</span> : Full-Time</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="job-description">
+                                        <div>
+                                            <span class="job-subtitle">Job Summary</span>
+                                            <p>We are seeking a skilled and customer-focused Technical Support Engineer
+                                                to provide software and technical assistance to our customers. The ideal
+                                                candidate should have a solid understanding of software and hardware
+                                                troubleshooting, along with knowledge of MySQL, HTML, and strong
+                                                communication skills. You will be responsible for diagnosing and
+                                                resolving issues, ensuring a seamless experience for our clients.</p>
+                                        </div>
+                                        <div>
+                                            <span class="job-subtitle">Key Responsibilities</span>
+                                            <ul>
+                                                <li>
+                                                    <p class="fw-semibold">Customer Support :</p>
+                                                    <p>Provide software support to customers by understanding their
+                                                        technical issues and offering solutions.</p>
+                                                    <p>Communicate with customers via phone, email, or chat to assist in
+                                                        resolving technical problems.</p>
+                                                    <p>Maintain a positive and professional relationship with clients,
+                                                        ensuring their satisfaction.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Issue Diagnosis and Troubleshooting :</p>
+                                                    <p>Research and identify solutions for both software and
+                                                        hardware-related issues.</p>
+                                                    <p>Diagnose and troubleshoot technical issues, including account
+                                                        setup, network configurations, and software errors.</p>
+                                                    <p>Ask targeted questions to quickly understand the root cause of a
+                                                        problem and guide clients through step-by-step resolutions.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Problem Resolution and Escalation :</p>
+                                                    <p>Track and resolve computer system issues within agreed time
+                                                        limits.</p>
+                                                    <p>Escalate unresolved issues to appropriate internal teams, such as
+                                                        software developers, when necessary.</p>
+                                                    <p>Provide prompt and accurate feedback and updates to customers
+                                                        regarding the status of their issues.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Technical Reporting :</p>
+                                                    <p>Prepare accurate and timely reports on technical support
+                                                        activities.</p>
+                                                    <p>Document customer interactions, technical problems, and solutions
+                                                        for future reference.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Multitasking and Prioritization :</p>
+                                                    <p>Prioritize and manage multiple open customer issues
+                                                        simultaneously, ensuring timely resolution.</p>
+                                                    <p>Follow up with customers to ensure issues are fully resolved.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <span class="job-subtitle">Requirements :</span>
+                                            <ul>
+                                                <li>
+                                                    <p>Bachelor's degree in Computer Science, Information Technology, or
+                                                        a related field (or equivalent work experience).</p>
+                                                </li>
+                                                <li>
+                                                    <p>Proven experience as a Technical Support Engineer or similar role
+                                                        in software support.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Knowledge of MySQL, HTML, and the ability to write and understand
+                                                        SQL queries.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Familiarity with basic network configurations and
+                                                        troubleshooting.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Good understanding of computer systems, mobile devices, and other
+                                                        technical products.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Ability to diagnose and troubleshoot technical issues across
+                                                        various platforms.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Experience with issue tracking and escalation processes.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Strong verbal and written communication skills to explain
+                                                        technical solutions in a clear and concise manner.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Excellent problem-solving skills with attention to detail.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Ability to work independently and as part of a team to resolve
+                                                        customer issues efficiently.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Technical Support - Team Leader
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#jobAccordion">
+                                <div class="accordion-body">
+                                    <div class="job-detail-top mb-3">
+                                        <div class="row">
+                                            <div class="col-12 col-xl-5">
+                                                <div class="d-md-flex align-items-center gap-4">
+                                                    <p><span class="fw-semibold">Position</span> : Team Leader</p>
+                                                    <p><span class="fw-semibold">Department</span> : Technical Support
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-xl-7">
+                                                <div class="d-md-flex align-items-center gap-4">
+                                                    <p><i class="bi bi-briefcase me-2"></i><span
+                                                            class="fw-semibold">Experience</span> : 3-5 Years Minimum
+                                                    </p>
+                                                    <p><i class="bi bi-geo-alt me-2"></i><span
+                                                            class="fw-semibold">Location</span> : Pune</p>
+                                                    <p><i class="bi bi-clock me-2"></i><span
+                                                            class="fw-semibold">Employment</span> : Full-Time</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="job-description">
+                                        <div>
+                                            <span class="job-subtitle">Job Summary</span>
+                                            <p>We are seeking a skilled and dedicated Technical Support Team Leader to
+                                                oversee our support team in delivering high-quality technical assistance
+                                                to our clients. This role requires hands-on leadership in managing a
+                                                team of technical support representatives, expertise in ERP-based
+                                                software, and a commitment to outstanding customer service. The ideal
+                                                candidate will ensure efficient issue resolution, customer satisfaction,
+                                                and seamless software support while fostering a collaborative and
+                                                productive team environment.</p>
+                                        </div>
+                                        <div>
+                                            <span class="job-subtitle">Key Responsibilities</span>
+                                            <ul>
+                                                <li>
+                                                    <p class="fw-semibold">Team Management :</p>
+                                                    <p>Lead, mentor, and manage the technical support team to deliver
+                                                        high-quality service and meet performance targets.</p>
+                                                    <p>Monitor team performance, provide feedback, and conduct regular
+                                                        one-on-one sessions to support team members’ professional
+                                                        growth.</p>
+                                                    <p>Coordinate work schedules, assign tasks, and ensure adequate team
+                                                        coverage to meet client demand.</p>
+                                                    <p>Organize training sessions and development programs to keep the
+                                                        team updated on software changes, new tools, and best practices.
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">ERP-Based Software Knowledge :</p>
+                                                    <p>Serve as the subject matter expert in ERP systems used by the
+                                                        organization, providing guidance and support to team members.
+                                                    </p>
+                                                    <p>Troubleshoot ERP software issues, provide accurate solutions, and
+                                                        assist customers with complex software inquiries.</p>
+                                                    <p>Stay updated on software updates, new features, and best
+                                                        practices to optimize team and customer experiences.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Customer Support and Communication :</p>
+                                                    <p>Ensure that the team provides timely, accurate, and courteous
+                                                        responses to customer inquiries and technical issues.</p>
+                                                    <p>Act as an escalation point for high-priority or complex customer
+                                                        issues, ensuring prompt and effective resolution.</p>
+                                                    <p>Regularly communicate with clients to gather feedback, understand
+                                                        their needs, and enhance the support experience.</p>
+                                                    <p>Collaborate with other departments, such as Product Development
+                                                        and Sales, to resolve issues efficiently and enhance customer
+                                                        satisfaction.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Software Support and Troubleshooting :</p>
+                                                    <p>Oversee troubleshooting of software-related problems, ensuring
+                                                        adherence to company standards and protocols.</p>
+                                                    <p>Ensure that all support documentation is accurate, up-to-date,
+                                                        and accessible to team members and customers.</p>
+                                                    <p>Analyze recurring issues to identify trends and implement
+                                                        preventive measures or escalate for permanent resolution.</p>
+                                                    <p>Use support tools and systems to track, monitor, and document
+                                                        customer issues, ensuring accurate records are maintained.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Reporting and Improvement :</p>
+                                                    <p>Prepare and submit weekly and monthly reports on support team
+                                                        performance, client feedback, and key metrics.</p>
+                                                    <p>Identify areas for process improvements and implement strategies
+                                                        to enhance efficiency, customer satisfaction, and service
+                                                        quality.</p>
+                                                    <p>Participate in strategic planning to enhance support offerings,
+                                                        streamline processes, and improve team productivity.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <span class="job-subtitle">Requirements :</span>
+                                            <ul>
+                                                <li>
+                                                    <p>Bachelor’s degree in Computer Science, Information Technology, or
+                                                        a related field.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Minimum of 3-5 years in a technical support role, with at least
+                                                        1-2 years in a leadership or supervisory capacity.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Strong understanding of ERP systems and related software support
+                                                        requirements.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Excellent interpersonal and communication skills with a
+                                                        customer-centric approach.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Proven team leadership, coaching, and conflict-resolution skills.
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>Strong analytical abilities, with a focus on root-cause analysis
+                                                        and strategic resolution.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Ability to multitask, prioritize, and handle high-pressure
+                                                        situations efficiently.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Sales Manager
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#jobAccordion">
+                                <div class="accordion-body">
+                                    <div class="job-detail-top mb-3">
+                                        <div class="row">
+                                            <div class="col-12 col-xl-6">
+                                                <div class="d-md-flex align-items-center gap-4">
+                                                    <p><span class="fw-semibold">Position</span> : Sales Manager</p>
+                                                    <p><span class="fw-semibold">Department</span> : Sales</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-xl-6">
+                                                <div class="d-md-flex align-items-center gap-4">
+                                                    <p><i class="bi bi-briefcase me-2"></i><span
+                                                            class="fw-semibold">Experience</span> : 5+ Years</p>
+                                                    <p><i class="bi bi-geo-alt me-2"></i><span
+                                                            class="fw-semibold">Location</span> : Pune</p>
+                                                    <p><i class="bi bi-clock me-2"></i><span
+                                                            class="fw-semibold">Employment</span> : Full-Time</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="job-description">
+                                        <div>
+                                            <span class="job-subtitle">Job Summary</span>
+                                            <p>The Sales Manager is responsible for leading and managing the sales team
+                                                to achieve revenue targets, expand market share, and ensure the
+                                                satisfaction of clients. This role involves developing strategic sales
+                                                plans, motivating the team, managing key accounts, and maintaining
+                                                strong relationships with clients and stakeholders. The ideal candidate
+                                                will have a proven track record in sales management, excellent
+                                                leadership skills, and the ability to foster a high-performance culture
+                                                within the sales team.</p>
+                                        </div>
+                                        <div>
+                                            <span class="job-subtitle">Key Responsibilities</span>
+                                            <ul>
+                                                <li>
+                                                    <p class="fw-semibold">Sales Strategy Development :</p>
+                                                    <p>Develop and implement comprehensive sales strategies to meet
+                                                        business goals and drive revenue growth.</p>
+                                                    <p>Analyze market trends, competition, and customer needs to
+                                                        identify opportunities for growth.</p>
+                                                    <p>Collaborate with senior management to set sales targets and
+                                                        forecast revenues.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Team Management :</p>
+                                                    <p>Lead, coach, and mentor a team of sales professionals to ensure
+                                                        individual and team performance targets are met.</p>
+                                                    <p>Provide ongoing training and development opportunities for team
+                                                        members to enhance their skills.</p>
+                                                    <p>Monitor team performance, set KPIs, and conduct regular
+                                                        performance reviews.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Client Relationship Management :</p>
+                                                    <p>Build and maintain strong relationships with key clients,
+                                                        ensuring high levels of customer satisfaction and retention.</p>
+                                                    <p>Manage high-profile accounts and negotiate contracts with new and
+                                                        existing customers.</p>
+                                                    <p>Address client issues and concerns promptly and professionally,
+                                                        ensuring positive outcomes.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Business Development :</p>
+                                                    <p>Identify and pursue new business opportunities to expand the
+                                                        company’s customer base.</p>
+                                                    <p>Collaborate with the marketing team to align sales campaigns with
+                                                        overall business objectives.</p>
+                                                    <p>Attend industry events, conferences, and networking opportunities
+                                                        to generate leads and represent the company.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Reporting and Analysis :</p>
+                                                    <p>Prepare regular sales reports, analyzing key performance metrics,
+                                                        and providing insights to senior management.</p>
+                                                    <p>Track sales performance against targets and adjust strategies as
+                                                        needed.</p>
+                                                    <p>Provide feedback on product improvements or market gaps based on
+                                                        customer feedback.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Budgeting and Resource Allocation :</p>
+                                                    <p>Manage the sales budget effectively, ensuring resources are
+                                                        allocated to maximize sales efficiency.</p>
+                                                    <p>Collaborate with other departments (e.g., marketing, operations)
+                                                        to ensure seamless integration of sales efforts.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <span class="job-subtitle">Requirements :</span>
+                                            <ul>
+                                                <li>
+                                                    <p>Bachelor’s degree in Business, Marketing, or a related field (MBA
+                                                        preferred).</p>
+                                                </li>
+                                                <li>
+                                                    <p>5+ years of experience in sales, with at least 2 years in a
+                                                        managerial role.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Proven track record of meeting or exceeding sales targets.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Experience in Jewellery Software, Billing & ERP software or
+                                                        related sectors is a plus.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Strong leadership and team management skills.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Excellent negotiation, communication, and interpersonal skills.
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>Ability to analyze sales data and translate insights into action.
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>Familiarity with CRM software and sales performance metrics.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Strategic thinker with the ability to implement practical
+                                                        solutions.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Leadership and team-building abilities.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Results-driven with a focus on exceeding targets.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Strong business acumen and market awareness.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Excellent problem-solving skills.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Ability to work in a fast-paced and dynamic environment.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Core PHP Developer
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#jobAccordion">
+                                <div class="accordion-body">
+                                    <div class="job-detail-top mb-3">
+                                        <div class="row">
+                                            <div class="col-12 col-xl-6">
+                                                <div class="d-md-flex align-items-center gap-4">
+                                                    <p><span class="fw-semibold">Position</span> : Core PHP Developer
+                                                    </p>
+                                                    <p><span class="fw-semibold">Department</span> : Development</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-xl-6">
+                                                <div class="d-md-flex align-items-center gap-4">
+                                                    <p><i class="bi bi-briefcase me-2"></i><span
+                                                            class="fw-semibold">Experience</span> : 2+ Years</p>
+                                                    <p><i class="bi bi-geo-alt me-2"></i><span
+                                                            class="fw-semibold">Location</span> : Pune</p>
+                                                    <p><i class="bi bi-clock me-2"></i><span
+                                                            class="fw-semibold">Employment</span> : Full-Time</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="job-description">
+                                        <div>
+                                            <span class="job-subtitle">Job Summary</span>
+                                            <p>We are seeking an experienced Core PHP Developer to join our team. The
+                                                ideal candidate will have a strong command of PHP development and be
+                                                proficient in creating dynamic and scalable web applications. You will
+                                                be responsible for developing and maintaining various web applications,
+                                                ensuring smooth functionality and user experience. Knowledge of web
+                                                technologies such as XML, CSS, HTML, MySQL, and JavaScript is essential,
+                                                alongside experience with MVC frameworks and API integrations.</p>
+                                        </div>
+                                        <div>
+                                            <span class="job-subtitle">Key Responsibilities</span>
+                                            <ul>
+                                                <li>
+                                                    <p class="fw-semibold">Core PHP Development :</p>
+                                                    <p>Develop, test, and maintain custom web applications using Core
+                                                        PHP.</p>
+                                                    <p>Write clean, well-documented, and efficient code adhering to best
+                                                        practices.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Front-End Development :</p>
+                                                    <p>Collaborate with front-end developers and designers to integrate
+                                                        web designs with server-side logic using HTML, CSS, and
+                                                        JavaScript.</p>
+                                                    <p>Ensure cross-browser compatibility and responsiveness of web
+                                                        applications.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Database Management :</p>
+                                                    <p>Design, develop, and maintain databases using MySQL.</p>
+                                                    <p>Optimize queries and database structure to ensure performance and
+                                                        scalability.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">API Integration :</p>
+                                                    <p>Develop and integrate RESTful APIs to enable seamless
+                                                        communication between systems.</p>
+                                                    <p>Work with third-party APIs to integrate external services into
+                                                        web applications.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">MVC Architecture :</p>
+                                                    <p>Implement and maintain code using MVC frameworks (e.g., Laravel,
+                                                        CodeIgniter) to ensure a structured and scalable development
+                                                        approach.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">AJAX and jQuery :</p>
+                                                    <p>Utilize AJAX for creating asynchronous web applications,
+                                                        improving user experience by reducing server load.</p>
+                                                    <p>Use jQuery to enhance the functionality and interactivity of the
+                                                        user interface.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">XML Handling :</p>
+                                                    <p>Work with XML for data interchange between applications, ensuring
+                                                        proper parsing and validation of data.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Testing and Debugging :</p>
+                                                    <p>Identify bugs and issues, conduct thorough testing, and implement
+                                                        fixes in a timely manner.</p>
+                                                    <p>Conduct performance tuning and optimization of existing web
+                                                        applications.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="fw-semibold">Collaboration and Documentation :</p>
+                                                    <p>Collaborate with the development team to ensure seamless project
+                                                        delivery.</p>
+                                                    <p>Maintain detailed project documentation, including technical
+                                                        requirements, design specifications, and user guides.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <span class="job-subtitle">Requirements :</span>
+                                            <ul>
+                                                <li>
+                                                    <p>Bachelor's degree in Computer Science, Information Technology, or
+                                                        a related field.</p>
+                                                </li>
+                                                <li>
+                                                    <p>2+ years of experience in Core PHP development.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Strong understanding of front-end technologies (HTML, CSS,
+                                                        JavaScript).</p>
+                                                </li>
+                                                <li>
+                                                    <p>Proficiency in working with MySQL databases.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Experience with RESTful APIs and third-party API integration.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Hands-on experience with MVC frameworks like Laravel,
+                                                        CodeIgniter, or similar.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Working knowledge of AJAX, jQuery, and XML.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Strong problem-solving and debugging skills.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Excellent understanding of Object-Oriented Programming (OOP).</p>
+                                                </li>
+                                                <li>
+                                                    <p>Good knowledge of version control systems (e.g., Git).</p>
+                                                </li>
+                                                <li>
+                                                    <p>Ability to write optimized SQL queries.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Familiarity with Agile development methodologies.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Excellent problem-solving skills.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Strong communication and team collaboration skills.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="loginDiv jobform-div" id="jobForm">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-12 col-xl-6 d-none d-xl-block">
+                    <div class="h-100">
+                        <img class="w-100 h-100" src="img/home/career-form.png" alt="career">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-10 col-xl-6 mx-auto">
+                    <form class="php-email-form career-form border">
+                        <div class="row gy-2">
+                            <div class="col-md-12 ps-md-0">
+                                <p class="login-title mb-3">Build a Successful Career Path with BillingERP</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>First Name</label>
+                                <input type="text" class="form-control" placeholder="Enter First Name">
+                                <span class="error"></span>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Last Name</label>
+                                <input type="text" class="form-control" placeholder="Enter Last Name">
+                                <span class="error"></span>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Email ID</label>
+                                <input type="text" class="form-control" placeholder="Enter Email ID">
+                                <span class="error"></span>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Mobile No.</label>
+                                <input type="text" class="form-control" placeholder="Enter Mobile No.">
+                                <span class="error"></span>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Current Location</label>
+                                <input type="text" class="form-control" placeholder="Enter Current Location">
+                                <span class="error"></span>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Job Level</label>
+                                <select class="form-select" name="job_level" oninput="validateInput(this)">
+                                    <option selected>Fresher</option>
+                                    <option value="1">Experience</option>
+                                    <option value="2">Executive</option>
+                                    <option value="3">Senior</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Job Title</label>
+                                <input type="text" class="form-control" placeholder="Enter Job Title ">
+                                <span class="error"></span>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Work Mode</label>
+                                <select class="form-select" name="work_mode" oninput="validateInput(this)">
+                                    <option selected>Office</option>
+                                    <option value="1">Remote</option>
+                                    <option value="2">Hybrid</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Current Salary</label>
+                                <input type="text" class="form-control" placeholder="Current CTC ">
+                                <span class="error"></span>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Expected Salary</label>
+                                <input type="text" class="form-control" placeholder="Expected CTC ">
+                                <span class="error"></span>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="upload-btn-wrapper mt-3">
+                                    <button class="btn"><svg class="me-1" fill="#3b5998" version="1.1" id="Capa_1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+                                            viewBox="0 0 45.057 45.057" xml:space="preserve">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <g>
+                                                    <g id="_x35_8_24_">
+                                                        <g>
+                                                            <path
+                                                                d="M19.558,25.389c-0.067,0.176-0.155,0.328-0.264,0.455c-0.108,0.129-0.24,0.229-0.396,0.301 c-0.156,0.072-0.347,0.107-0.57,0.107c-0.313,0-0.572-0.068-0.78-0.203c-0.208-0.137-0.374-0.316-0.498-0.541 c-0.124-0.223-0.214-0.477-0.27-0.756c-0.057-0.279-0.084-0.564-0.084-0.852c0-0.289,0.027-0.572,0.084-0.853 c0.056-0.281,0.146-0.533,0.27-0.756c0.124-0.225,0.29-0.404,0.498-0.541c0.208-0.137,0.468-0.203,0.78-0.203 c0.271,0,0.494,0.051,0.666,0.154c0.172,0.105,0.31,0.225,0.414,0.361c0.104,0.137,0.176,0.273,0.216,0.414 c0.04,0.139,0.068,0.25,0.084,0.33h2.568c-0.112-1.08-0.49-1.914-1.135-2.502c-0.644-0.588-1.558-0.887-2.741-0.895 c-0.664,0-1.263,0.107-1.794,0.324c-0.532,0.215-0.988,0.52-1.368,0.912c-0.38,0.392-0.672,0.863-0.876,1.416 c-0.204,0.551-0.307,1.165-0.307,1.836c0,0.631,0.097,1.223,0.288,1.77c0.192,0.549,0.475,1.021,0.847,1.422 s0.825,0.717,1.361,0.949c0.536,0.23,1.152,0.348,1.849,0.348c0.624,0,1.18-0.105,1.668-0.312 c0.487-0.209,0.897-0.482,1.229-0.822s0.584-0.723,0.756-1.146c0.172-0.422,0.259-0.852,0.259-1.283h-2.593 C19.68,25.023,19.627,25.214,19.558,25.389z">
+                                                            </path>
+                                                            <polygon
+                                                                points="26.62,24.812 26.596,24.812 25.192,19.616 22.528,19.616 25.084,28.184 28.036,28.184 30.713,19.616 28,19.616 ">
+                                                            </polygon>
+                                                            <path
+                                                                d="M33.431,0H5.179v45.057h34.699V6.251L33.431,0z M36.878,42.056H8.179V3h23.706v4.76h4.992L36.878,42.056L36.878,42.056z">
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>Upload Resume Here</button>
+                                    <input type="file" name="candidate_resume" oninput="validateInput(this)">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="captchapic top-0 mt-2 mt-sm-3 mb-4">
+                                    <input class="form-control d-none" id="captchaImgId" type="hidden" value="">
+                                    <input class="form-control" id="captchaValidId" type="hidden" value="">
+                                    <canvas id="captchaCanvas" class="captchaCanvas" width="120" height="35"></canvas>
+                                    <input type="text" id="captchaAns" onkeyup="checkCaptcha()" class="form-control"
+                                        placeholder="Enter Captcha" />
+                                    <i id="captchaValidIcon" class="d-none bi bi-check-square-fill"></i>
+                                </div>
+                                <span class="d-none error" id="captchaInvalid">Please enter valid captcha</span>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn signinbtn mb-3">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="berp-footer">
+        <section class="pb-0">
+            <div class="container">
+                <div class="row gap-md-0 gap-5">
+                    <div class="col-md-4 col-12">
+                        <div class="d-flex flex-column justify-content-md-around gap-md-0 gap-4 h-100">
+                            <a href="index.html" class="logo d-block">
+                                <img src="img/home/logo.png" alt="Logo" class="footer-logo" width="200">
+                            </a>
+                            <div>
+                                <a href="index.html" class="footer-co-link d-block">billingerp.in</a>
+                                <div class="d-flex gap-3 align-items-center social-icons mt-3">
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M24.1392 32V23.9H26.5983L27 20.3H24.1392V18.5466C24.1392 17.6196 24.1628 16.7 25.4582 16.7H26.7702V14.1261C26.7702 14.0874 25.6432 14 24.5031 14C22.122 14 20.6311 15.4915 20.6311 18.2302V20.3H18V23.9H20.6311V32H24.1392Z"
+                                            fill="#0E9F16" />
+                                        <circle cx="22.5" cy="22.5" r="22" stroke="#DADADA" />
+                                    </svg>
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M21.9999 27.908C24.7111 27.908 26.909 25.7101 26.909 22.9989C26.909 20.2877 24.7111 18.0898 21.9999 18.0898C19.2887 18.0898 17.0908 20.2877 17.0908 22.9989C17.0908 25.7101 19.2887 27.908 21.9999 27.908ZM21.9999 26.2717C23.8074 26.2717 25.2726 24.8064 25.2726 22.9989C25.2726 21.1915 23.8074 19.7262 21.9999 19.7262C20.1924 19.7262 18.7272 21.1915 18.7272 22.9989C18.7272 24.8064 20.1924 26.2717 21.9999 26.2717Z"
+                                            fill="#0E9F16" />
+                                        <path
+                                            d="M26.909 17.2725C26.4571 17.2725 26.0908 17.6388 26.0908 18.0906C26.0908 18.5425 26.4571 18.9088 26.909 18.9088C27.3609 18.9088 27.7272 18.5425 27.7272 18.0906C27.7272 17.6388 27.3609 17.2725 26.909 17.2725Z"
+                                            fill="#0E9F16" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.5351 16.6804C13 17.7305 13 19.1052 13 21.8545V24.1455C13 26.8948 13 28.2695 13.5351 29.3196C14.0057 30.2433 14.7567 30.9943 15.6804 31.4649C16.7305 32 18.1052 32 20.8545 32H23.1455C25.8948 32 27.2695 32 28.3196 31.4649C29.2433 30.9943 29.9943 30.2433 30.4649 29.3196C31 28.2695 31 26.8948 31 24.1455V21.8545C31 19.1052 31 17.7305 30.4649 16.6804C29.9943 15.7567 29.2433 15.0057 28.3196 14.5351C27.2695 14 25.8948 14 23.1455 14H20.8545C18.1052 14 16.7305 14 15.6804 14.5351C14.7567 15.0057 14.0057 15.7567 13.5351 16.6804ZM23.1455 15.6364H20.8545C19.4529 15.6364 18.5 15.6376 17.7635 15.6978C17.0461 15.7564 16.6792 15.8627 16.4233 15.9931C15.8075 16.3068 15.3068 16.8075 14.9931 17.4233C14.8627 17.6792 14.7564 18.0461 14.6978 18.7635C14.6376 19.5 14.6364 20.4529 14.6364 21.8545V24.1455C14.6364 25.5472 14.6376 26.4999 14.6978 27.2365C14.7564 27.9539 14.8627 28.3208 14.9931 28.5767C15.3068 29.1925 15.8075 29.6931 16.4233 30.0069C16.6792 30.1373 17.0461 30.2436 17.7635 30.3022C18.5 30.3623 19.4529 30.3636 20.8545 30.3636H23.1455C24.5472 30.3636 25.4999 30.3623 26.2365 30.3022C26.9539 30.2436 27.3208 30.1373 27.5767 30.0069C28.1925 29.6931 28.6931 29.1925 29.0069 28.5767C29.1373 28.3208 29.2436 27.9539 29.3022 27.2365C29.3623 26.4999 29.3636 25.5472 29.3636 24.1455V21.8545C29.3636 20.4529 29.3623 19.5 29.3022 18.7635C29.2436 18.0461 29.1373 17.6792 29.0069 17.4233C28.6931 16.8075 28.1925 16.3068 27.5767 15.9931C27.3208 15.8627 26.9539 15.7564 26.2365 15.6978C25.4999 15.6376 24.5472 15.6364 23.1455 15.6364Z"
+                                            fill="#0E9F16" />
+                                        <circle cx="22.5" cy="22.5" r="22" stroke="#DADADA" />
+                                    </svg>
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M19.9138 18.4428C19.6559 18.2954 19.339 18.2965 19.0821 18.4456C18.8251 18.5947 18.667 18.8693 18.667 19.1663V25.833C18.667 26.1301 18.8251 26.4047 19.0821 26.5538C19.339 26.7028 19.6559 26.7039 19.9138 26.5565L25.7471 23.2232C26.0067 23.0748 26.167 22.7988 26.167 22.4997C26.167 22.2006 26.0067 21.9245 25.7471 21.7762L19.9138 18.4428ZM23.654 22.4997L20.3337 24.397V20.6023L23.654 22.4997Z"
+                                            fill="#0E9F16" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 22.5C12 19.3752 12 17.8128 12.7958 16.7176C13.0528 16.3638 13.3638 16.0528 13.7176 15.7958C14.8128 15 16.3752 15 19.5 15H24.5C27.6248 15 29.1872 15 30.2824 15.7958C30.6362 16.0528 30.9472 16.3638 31.2042 16.7176C32 17.8128 32 19.3752 32 22.5C32 25.6248 32 27.1872 31.2042 28.2824C30.9472 28.6362 30.6362 28.9473 30.2824 29.2043C29.1872 30 27.6248 30 24.5 30H19.5C16.3752 30 14.8128 30 13.7176 29.2043C13.3638 28.9473 13.0528 28.6362 12.7958 28.2824C12 27.1872 12 25.6248 12 22.5ZM19.5 16.6667H24.5C26.0995 16.6667 27.1652 16.669 27.9727 16.7564C28.7491 16.8406 29.0867 16.9871 29.3028 17.1441C29.515 17.2983 29.7017 17.485 29.8559 17.6972C30.0129 17.9134 30.1594 18.2509 30.2436 19.0272C30.3311 19.8347 30.3333 20.9005 30.3333 22.5C30.3333 24.0995 30.3311 25.1652 30.2436 25.9727C30.1594 26.7491 30.0129 27.0867 29.8559 27.3028C29.7017 27.515 29.515 27.7017 29.3028 27.8559C29.0867 28.0129 28.7491 28.1594 27.9727 28.2436C27.1652 28.3311 26.0995 28.3333 24.5 28.3333H19.5C17.9005 28.3333 16.8347 28.3311 16.0272 28.2436C15.2509 28.1594 14.9134 28.0129 14.6972 27.8559C14.485 27.7017 14.2983 27.515 14.1441 27.3028C13.9871 27.0867 13.8405 26.7491 13.7564 25.9727C13.669 25.1652 13.6667 24.0995 13.6667 22.5C13.6667 20.9005 13.669 19.8347 13.7564 19.0272C13.8405 18.2509 13.9871 17.9134 14.1441 17.6972C14.2983 17.485 14.485 17.2983 14.6972 17.1441C14.9134 16.9871 15.2509 16.8406 16.0272 16.7564C16.8347 16.669 17.9005 16.6667 19.5 16.6667Z"
+                                            fill="#0E9F16" />
+                                        <circle cx="22.5" cy="22.5" r="22" stroke="#DADADA" />
+                                    </svg>
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="22.5" cy="22.5" r="22" stroke="#DADADA" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M31 30H27.6V24.0508C27.6 22.4188 26.8801 21.5083 25.5889 21.5083C24.1839 21.5083 23.35 22.4571 23.35 24.0508V30H19.95V18.95H23.35V20.1926C23.35 20.1926 24.4167 18.3208 26.8205 18.3208C29.2252 18.3208 31 19.7882 31 22.8244V30ZM16.0757 17.1828C14.9291 17.1828 14 16.2461 14 15.091C14 13.9367 14.9291 13 16.0757 13C17.2215 13 18.1505 13.9367 18.1505 15.091C18.1514 16.2461 17.2215 17.1828 16.0757 17.1828ZM14 30H18.25V18.95H14V30Z"
+                                            fill="#0E9F16" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-12">
+                        <div class="row">
+                            <div class="col-sm-4 col-12">
+                                <div class="footer-links">
+                                    <p class="fl-title">Quick Links</p>
+                                    <ul class="mt-3">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="index.html#demoform">Book Free Demo</a></li>
+                                        <li><a href="index.html#services">Services</a></li>
+                                        <li><a href="index.html#pricing">Pricing</a></li>
+                                        <li><a href="blog.html">Blogs</a></li>
+                                        <li><a href="index.html#faq">FAQ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-12">
+                                <div class="footer-links">
+                                    <p class="fl-title">Company</p>
+                                    <ul class="mt-3">
+                                        <li><a href="aboutus.html">About Us</a></li>
+                                        <li><a href="contactus.html">Contact Us</a></li>
+                                        <li><a href="career.html">Careers</a></li>
+                                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                                        <li><a href="terms.html">Terms & Conditions</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-12">
+                                <div class="footer-links">
+                                    <p class="fl-title">Contact Us</p>
+                                    <ul class="mt-3">
+                                        <li><a href="mailto:info@billingerp.in">info[at]billingerp[dot]in</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-line mt-2">
+                </div>
+                <a href="index.html" class="footer-copyright py-3 d-block">
+                    @2024 <span class="text-blue fw-semibold">Billing</span><span
+                        class="text-green fw-semibold">ERP</span> | All Rights Reserved
+                </a>
+            </div>
+        </section>
+    </footer>
+    <script src="vendor/aos/aos.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
